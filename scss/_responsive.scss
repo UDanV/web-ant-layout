@@ -1,0 +1,104 @@
+// Хедер
+
+@media (max-width: 1024px) {
+  .header {
+    align-items: flex-start;
+    gap: 20px;
+
+    &__links {
+      display: none;
+    }
+
+    &__number {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    gap: 15px;
+
+    &__logo {
+      font-size: 20px;
+    }
+
+    &__links {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+
+      a {
+        font-size: 14px;
+      }
+    }
+
+    &__number {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  .white {
+    padding: 40px 20px;
+  }
+}
+
+// Футер
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 80px !important;
+
+    &__content {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .footer__menu .row {
+      flex-direction: row;
+      gap: 1em;
+    }
+
+    .rights {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 60px 20px !important;
+
+    &__logo h2 {
+      font-size: 20px;
+    }
+
+    &__menu {
+      h2 {
+        font-size: 11px;
+        letter-spacing: 4px;
+      }
+
+      ul {
+        font-size: 11px;
+      }
+
+      .contact {
+        align-items: center;
+        justify-content: start !important;
+        gap: 10px;
+      }
+    }
+
+    .rights {
+      font-size: 10.5px;
+      margin-left: 0 !important;
+    }
+  }
+
+  .purple {
+    padding: 60px 20px;
+  }
+}

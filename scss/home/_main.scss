@@ -1,0 +1,118 @@
+@import "../variables";
+
+.home {
+  background-image: url("../../assets/bg.png");
+  background-color: $secondary-color-100;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: $white-color;
+  height: 100vh;
+  font-weight: 800;
+  padding: 60px 120px;
+
+  &__title {
+    animation: slideInFromLeft 1.4s ease-out;
+
+    p {
+      font-size: 14px;
+      text-transform: uppercase;
+      line-height: 207.9%;
+      letter-spacing: 4px;
+    }
+
+    h1 {
+      font-size: 99px;
+      font-weight: 900;
+      line-height: 118.8%;
+      max-width: 70%;
+      margin-top: 18px;
+    }
+
+    .pink {
+      color: $primary-color;
+    }
+  }
+
+  &__wrapper {
+
+    .home__scroll {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      animation: float 3s ease-in-out infinite;
+
+      p {
+        transform: rotate(90deg);
+        transform-origin: right center;
+        white-space: nowrap;
+        text-align: right;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        margin: 0;
+        position: relative;
+        right: 145px;
+      }
+    }
+  }
+
+  &__subheader {
+    cursor: pointer;
+    display: flex;
+    gap: 40px;
+    position: absolute;
+    left: -1px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 30px;
+    font-weight: 400;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateX(1px);
+    }
+
+    p {
+      margin-left: 100px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .home {
+    padding: 60px;
+
+    &__subheader {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 40px 20px;
+
+    &__title h1 {
+      font-size: 48px;
+      max-width: 100%;
+    }
+
+    &__scroll {
+      display: none;
+    }
+
+    &__subheader {
+      display: none;
+    }
+
+    .home__scroll {
+      display: none;
+    }
+  }
+}

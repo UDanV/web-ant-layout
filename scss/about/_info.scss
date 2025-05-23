@@ -1,0 +1,54 @@
+@import '../variables';
+
+.info {
+  margin-top: 100px;
+  padding: 60px 120px;
+  animation: fadeInUp 1s ease-out;
+
+  h2 {
+    max-width: 70rem;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: stretch;
+  }
+
+  &__text {
+    width: 50%;
+
+    p {
+      color: $text-color-main;
+      max-width: 500px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .info {
+    padding: 40px 60px;
+
+    &__content {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    &__text {
+      width: 100%;
+
+      p {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .info {
+    padding: 30px 20px;
+
+    h2 {
+      font-size: 28px;
+    }
+  }
+}

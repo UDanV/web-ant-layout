@@ -1,0 +1,109 @@
+@import '../variables';
+
+.procedure {
+  padding-bottom: 180px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    &:nth-child(1) small { color: $primary-color }
+    &:nth-child(2) small { color: $tetriary-color }
+    &:nth-child(3) small { color: $secondary-color-100 }
+
+    &:nth-child(1) figure { background-color: $primary-color; margin-left: auto; }
+    &:nth-child(2) figure { background-color: $tetriary-color }
+    &:nth-child(3) figure { background-color: $secondary-color-100; margin-left: auto; }
+  }
+
+  &__text {
+    padding: 60px 0 0 120px;
+
+    h2 {
+      font-size: 27px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    p {
+      color: $text-color-main;
+    }
+  }
+
+  &__image {
+
+    figure {
+      position: relative;
+      z-index: -1;
+      margin: -350px 0 0 0;
+      width: 600px;
+      height: 468px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .procedure {
+    padding-bottom: 120px;
+
+    &__content {
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+
+      &:nth-child(2) {
+        flex-direction: column-reverse;
+      }
+
+      figure {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+      }
+    }
+
+    &__image {
+      img {
+        width: 100%;
+      }
+    }
+
+    &__text {
+      padding: 0 40px;
+
+      h2 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .procedure {
+
+    &__text {
+      padding: 0 20px;
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    &__content {
+      figure {
+        width: 100%;
+        height: auto;
+        margin: 0;
+      }
+    }
+  }
+}

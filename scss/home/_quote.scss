@@ -1,0 +1,159 @@
+@import '../variables';
+@import '../mixins';
+
+.quote {
+  background-color: $white-color;
+  padding: 120px;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__floating {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+    height: 300px;
+    animation: pulse 4s ease-in-out infinite;
+
+    img {
+      position: absolute;
+      width: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+
+      &:nth-child(1) {
+        top: 150px;
+        left: 0;
+        animation-delay: 0s;
+      }
+
+      &:nth-child(2) {
+        top: 20px;
+        left: 150px;
+        animation-delay: 0.5s;
+      }
+
+      &:nth-child(3) {
+        top: 100px;
+        left: 200px;
+        animation-delay: 1s;
+      }
+
+      &:nth-child(4) {
+        bottom: 0;
+        left: 400px;
+        animation-delay: 0.3s;
+      }
+    }
+  }
+
+  &__image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .quote--sign {
+      width: 90px;
+      margin-top: -30px;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    img {
+      position: relative;
+      margin-top: -150px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+
+    blockquote {
+      font-family: "Noticia Text", serif;
+      margin: 0;
+      font-size: 36px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 177.417%;
+      max-width: 50%;
+      text-align: center;
+    }
+  }
+
+  span {
+    color: $primary-color;
+    font-weight: 800;
+  }
+
+  p {
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 163.35%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .quote {
+    padding: 80px;
+
+    &__text {
+      flex-direction: column;
+
+      blockquote {
+        max-width: 100%;
+        font-size: 28px;
+      }
+    }
+
+    &__image {
+      img {
+        width: 250px;
+        margin: 0;
+      }
+
+      .quote--sign {
+        width: 50px;
+      }
+    }
+
+    &__floating {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .quote {
+    padding: 40px 20px;
+
+    &__text {
+      margin-top: 40px;
+
+      blockquote {
+        font-size: 22px;
+      }
+    }
+
+    &__floating {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      img {
+        width: 80px;
+        margin: 5px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}

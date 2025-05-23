@@ -1,0 +1,21 @@
+@mixin scatter-avatars($count) {
+  @for $i from 1 through $count {
+    &:nth-child(#{$i}) {
+      $x: random(60) - 30 + px;
+      $y: random(40) - 20 + px;
+      transform: translate($x, $y);
+      animation-delay: $i * 0.2s;
+    }
+  }
+}
+
+@mixin float-animation {
+  @keyframes floating {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-15px) scale(1.05);
+    }
+  }
+}
